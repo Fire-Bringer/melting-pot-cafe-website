@@ -1,0 +1,32 @@
+.perk-row{
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #541519;
+  justify-content: space-around;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.perk-box{
+  display: flex;
+  flex-direction: row;
+  color: #fffe00cc;
+  align-items: center;
+  gap: 1rem;
+}
+.fa-solid{
+  font-size: 1.5rem;
+}
+.perk-row .perk-box h3{
+  font-family: "CooperBlack";
+  font-size: clamp(1rem, 1.8vw, 1.8rem);
+}
+
+@media (max-width: 435px){
+  .perk-box {
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+}
