@@ -1,0 +1,154 @@
+<section class="menu" id="menu">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h1>Cafe Menu</h1>
+      </div>
+    </div>
+    <div class="row">
+      <!--
+      <div class="filter-buttons">
+        <ul id="filter-btns">
+          <li class="active" data-target="toast">TOAST & SANDWICHES</li>
+          <li data-target="salads">SALADS</li>
+          <li data-target="snacks">SNACKS</li>
+          <li data-target="cereal">CEREAL</li>
+          <li data-target="denish">DENISH</li>
+          <li data-target="coffee">COFFEE</li>
+          <li data-target="milk">MILK</li>
+          <li data-target="drinks">DRINK</li>
+        </ul>
+      </div>
+      -->
+
+      <!--Test Tabs-->
+      <div class="tab">
+        <button class="tablinks" onclick="openMenu(event, 'Toast')">TOAST & SANDWICHES</button>
+        <button class="tablinks" onclick="openMenu(event, 'Salads')">SALADS</button>
+        <button class="tablinks" onclick="openMenu(event, 'Snacks')">SNACKS</button>
+        <button class="tablinks" onclick="openMenu(event, 'Cereal')">CEREAL</button>
+        <button class="tablinks" onclick="openMenu(event, 'Denish')">DENISH</button>
+        <button class="tablinks" onclick="openMenu(event, 'Coffee')">COFFEE</button>
+        <button class="tablinks" onclick="openMenu(event, 'Milk')">MILK</button>
+        <button class="tablinks" onclick="openMenu(event, 'Drinks')">DRINKS</button>
+      </div>
+      <!--Test Tabs End-->
+    </div>
+
+    <!--Tab Content-->
+    <div id="Toast" class="tabcontent">
+      <p>
+        <strong>クラシックメルト ￥５００単品 / ￥７００セット</strong>
+        <br>
+        ゴーダチーズ,ブラックペッパー
+        <br><br>
+        <strong>クラシック  ＸＬ ￥６５０単品 / ￥８００セット</strong>
+        <br>
+        ハム,ゴーダチーズ,エッグ
+        <br><br>
+        <strong>鬼チーズ ￥６００単品 / ￥７５０セット</strong>
+        <br>
+        チェダーチーズ,ゴーダチーズ,モッツァレラチーズ
+        <br><br>
+        <strong>ホットチリツナ ￥６００単品 / ￥７５０セット</strong>
+        <br>
+        ゴーダチーズ,ツナ,トマト,チリとうからし,コーン
+        <br><br>
+        <strong>アボカド＆シュリンプ ￥７００単品 / ￥８５０セット</strong>
+        <br>
+        アボカド,ガーリックシュリンプ,クリームチーズ
+        <br><br>
+      </p>
+    </div>
+
+    <div id="Salads" class="tabcontent">
+      <p>
+        <strong>キングシーザー ￥７００</strong>
+        <br>
+        レタス,ベーコン,トマト,クルトン,パプリカ,温玉,パルメザン
+        <br><br>
+        <strong>クイーン  コブ ￥７５０</strong>
+        <br>
+        アボカド,チキン,トマト,レタス,オリーブ,ビーンズ,クリームチーズ
+        <br><br>
+      </p>
+    </div>
+
+    <div id="Snacks" class="tabcontent">
+      <p>
+        <strong>フレンチフライ ￥４５０</strong>
+        <br><br>
+        <strong>フィッシュ＆チップス ￥６００</strong>
+        <br><br>
+        <strong>オニオンフライ ￥５５０</strong>
+        <br><br>
+        <strong>ナチョス ￥５００</strong>
+        <br><br>
+      </p>
+    </div>
+
+    <div id="Cereal" class="tabcontent">
+      <p>
+        <strong>プレーン ￥４００</strong>
+        <br><br>
+        <strong>チョコレート ￥４００</strong>
+        <br><br>
+      </p>
+    </div>
+
+    <div id="Denish" class="tabcontent">
+      <p>
+        <strong>ミックスベリー＆クリームチーズ ￥６５０</strong>
+        <br>
+        ミックスベリー,ベリーソース,クリームチーズ
+        <br><br>
+        <strong>チョコバナナ＆マスカルポーネ ￥６５０</strong>
+        <br>
+        チョコソース,バナナ,マスカルポーネチーズ
+        <br><br>
+        <strong>ゆず＆クリームチーズ  ￥６００</strong>
+        <br>
+        ゆずジャム,クリームチーズ
+        <br><br>
+        <strong>小倉＆クリームチーズ ￥６００</strong>
+        <br><br>
+      </p>
+    </div>
+
+    <div id="Coffee" class="tabcontent">
+      <p>
+        <strong>メルティングポットオリジナル  ￥４００</strong>
+        <br>
+        HOT or ICE
+        <br><br>
+      </p>
+    </div>
+
+    <div id="Milk" class="tabcontent">
+      <p>
+        <strong>ミルク  ￥２５０</strong>
+        <br>
+        HOT or ICE
+        <br><br>
+        <strong>チョコレートミルク  ￥３５０</strong>
+        <br><br>
+        <strong>キャラメルミルク  ￥３５０</strong>
+        <br><br>
+        <strong>バナナミルク  ￥４００</strong>
+        <br><br>
+      </p>
+    </div>
+
+    <div id="Drinks" class="tabcontent">
+      <p>
+        <strong>ソフトドリンク  ￥３００</strong>
+        <br><br>
+        <strong>ノンアルコールビール  ￥４００</strong>
+        <br><br>
+        <strong>各種アルコール類  BEER,WHISKEY,COCKTAIL,etc ￥５５０～</strong>
+        <br><br>
+      </p>
+    </div>
+
+  </div>
+</section>
