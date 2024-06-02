@@ -1,0 +1,62 @@
+.hero{
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(84, 21, 25, 0.5)) , image-url('shop_5.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+}
+.hero .full-screen{
+  min-height: 100vh;
+}
+.hero .hero-content{
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.hero .hero-content .block {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.hero .hero-content .block h5, .hero .hero-content .block .h5 {
+  color: #fffe00cc;
+  font-family: "CooperBlack";
+  font-size: 18px;
+  line-height: 1;
+  text-shadow: 2px 2px #000000;
+}
+.hero .hero-content .block h1{
+  color: #fffe00cc;
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: "Umbriago NF W01 Regular";
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px #000000;
+}
+.hero .hero-content .block h3{
+  color: #FFFE00;
+  font-family: "CooperBlack";
+  font-size: 25px;
+  font-weight: 500px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px #000000;
+}
+.hero .hero-content .block h6{
+  color: #fffe00cc;
+  font-family: "CooperBlack";
+  text-shadow: 2px 2px #000000;
+  margin-bottom: 2rem;
+}
+dl{
+  color: #fffe00cc;
+  text-shadow: 2px 2px #000000;
+}
+dd{
+  margin-bottom: 0;
+}

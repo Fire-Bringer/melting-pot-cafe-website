@@ -1,0 +1,73 @@
+header{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  border-bottom: 1px solid #423940;
+  padding: 0px 15px;
+  z-index: 11;
+}
+header.fixed{
+  background-color: #ffffff;
+  position: fixed;
+  border-color: #eeeeee;
+  animation: fixHeader .5s ease;
+  z-index: 11;
+}
+@keyframes fixedHeader{
+  0%{
+      transform: translateY(-100%);
+  }
+  100%{
+      transform: translateY(-1);
+  }
+}
+.shop-emblem{
+  height: auto;
+  width: 4.5rem;
+  margin-left: 3rem;
+}
+header .navbar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 3rem;
+}
+header .navbar ul li{
+  display: inline-block;
+  margin-left: 35px;
+}
+header .navbar ul li a{
+  font-family: "CooperBlack";
+  font-size: 15px;
+  text-decoration: none;
+  line-height: 72px;
+  text-shadow: 2px 2px #000000;
+  color: #fffe00cc;
+  display: block;
+  position: relative;
+}
+header.fixed .navbar ul li a{
+  color: #000000;
+}
+header .navbar ul li a::before{
+  content: '';
+  height: 3px;
+  background-color: #fffe00cc;
+  width: 0%;
+  position: absolute;
+  right: 0px;
+  bottom: -1px;
+  transition: all .5s ease;
+}
+header.fixed .navbar ul li a::before{
+  background-color: #da30a5fb;
+}
+
+header .navbar ul li a:hover::before{
+  width: 100%;
+  left: 0;
+}
+header .navbar ul li a.active::before{
+  width: 100%;
+  left: 0;
+}
