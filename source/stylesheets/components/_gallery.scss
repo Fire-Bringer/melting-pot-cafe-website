@@ -1,6 +1,6 @@
 .events{
   padding: 60px 15px;
-  background-color: #2F2A2A;
+  background-color: #541519;
 }
 .events-container{
   display: flex;
@@ -11,6 +11,7 @@
   color: #fffe00cc;
   text-shadow: 2px 2px #000000;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .gallery-wrap {
@@ -24,11 +25,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .gallery-img {
   width: 20rem;
+  border-radius: 1rem;
   filter: grayscale(100%);
   transition: transform 0.5s;
 }
