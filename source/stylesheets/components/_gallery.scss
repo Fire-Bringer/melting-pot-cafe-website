@@ -1,0 +1,51 @@
+.events{
+  padding: 60px 15px;
+  background-color: #2F2A2A;
+}
+.events-container{
+  display: flex;
+  flex-direction: row;
+}
+.events .container h1{
+  font-family: "CooperBlack";
+  color: #fffe00cc;
+  text-shadow: 2px 2px #000000;
+  text-align: center;
+}
+
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-wrap div {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.gallery-img {
+  width: 20rem;
+  filter: grayscale(100%);
+  transition: transform 0.5s;
+}
+.gallery::-webkit-scrollbar{
+  display: none;
+}
+.gallery-img:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 435px){
+  .events-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+}
