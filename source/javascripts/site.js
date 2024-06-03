@@ -1,3 +1,4 @@
+// Menu Tabs Start
 function openMenu(evt, menuName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -15,7 +16,7 @@ function openMenu(evt, menuName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(menuName).style.display = "block";
+  document.getElementById(menuName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
 
