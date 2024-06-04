@@ -1,16 +1,25 @@
 .hero{
   min-height: 100vh;
+  min-width: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(84, 21, 25, 0.5)) , image-url('shop_5.jpg');
   background-size: cover;
   background-position: center;
-  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero .full-screen{
-  min-height: 100vh;
-}
+
+// Background Video
+/* #myVideo {
+  top: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+} */
+
 .hero .hero-content{
-  flex: 0 0 100%;
-  max-width: 100%;
+  position: absolute;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -18,7 +27,6 @@
   justify-content: center;
 }
 .hero .hero-content .block {
-  flex: 0 0 75%;
   max-width: 75%;
 }
 .hero .hero-content .block h5, .hero .hero-content .block .h5 {
@@ -59,11 +67,4 @@ dl{
 }
 dd{
   margin-bottom: 0;
-}
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
 }
