@@ -1,0 +1,121 @@
+/* Mobile Navbar Start*/
+.head1 {
+  display: block;
+}
+.head2{
+  display: none;
+}
+.navbar2{
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.nav-link{
+  transition: 0.7s ease;
+  color: white;
+}
+.nav-link:hover{
+  color: #da30a5fb;
+}
+.hamburger{
+  display: none;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fffe00;
+}
+/* Mobile Navbar End */
+
+@media(max-width:767px){
+  .head1 {
+    display: none;
+  }
+  .head2 {
+    display: block;
+    background-color: #541519;
+    width: 100vw;
+  }
+  .shop-emblem{
+    margin-left: unset;
+  }
+  header{
+    padding: 15px;
+    position: fixed;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .navbar{
+    position: absolute;
+    background-color:#ffffff;
+    width: 100%;
+    left: 0px;
+    top: 60px;
+    padding: 15px;
+    border-top: 1px solid #eeeeee;
+    display: none;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .navbar.show{
+    display: block;
+  }
+  header .navbar ul li{
+    display: block;
+    margin-left: 0 ;
+  }
+  header .navbar ul li a{
+    line-height: 42px;
+    color: #000000;
+  }
+  header .navbar ul li a::before{
+    background-color: #da30a5fb;
+  }
+  .hamburger{
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item{
+    margin: 16px 0;
+  }
+  .nav-menu.active{
+    left: 0;
+    list-style-type: none;
+    background-color: #91524A;
+  }
+  .hero .hero-content{
+    margin-top: 5rem;
+  }
+}
