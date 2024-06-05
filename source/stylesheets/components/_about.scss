@@ -1,5 +1,5 @@
 .about{
-  padding: 60px 15px;
+  padding: 3rem;
   background-color: #D3BA96;
 }
 .about-container{
@@ -7,13 +7,10 @@
   flex-direction: row;
 }
 .about .about-content{
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding-right: 40px;
+  width: 50%;
 }
 .about .img{
-  flex: 0 0 50%;
-  max-width: 50%;
+  width: 50%;
   display: flex;
   justify-content: center;
 }
@@ -25,6 +22,7 @@
   display: block;
   border-radius: 1rem;
   border: 2px solid black;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 .about .about-content h2{
   font-family: "CooperBlack";
@@ -41,6 +39,21 @@
   margin: 15px 0 0px;
 }
 
+@media (max-width: 576px){
+  .about-container{
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+  .about .about-content{
+    padding-right: unset;
+    width: 70%;
+  }
+  .about .img img{
+    width: 100%;
+  }
+}
+
 @media (max-width: 435px){
   .about-container {
     flex-direction: column;
@@ -50,6 +63,6 @@
     width: 150%;
   }
   .about .about-content {
-    max-width: 75%;
+    width: 75%;
   }
 }

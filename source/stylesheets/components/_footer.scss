@@ -1,11 +1,13 @@
 footer{
-  padding: 0px 15px;
+  padding: 0.5rem 3rem;
   background-color: #2F2A2A;
+  border-top: 1px solid #999999;
 }
 #footer-brand{
   font-family: "Umbriago NF W01 Regular";
   font-size: 1.5rem;
   color: #fffe00cc;
+  text-shadow: 2px 2px #000000;
 }
 .access-info{
   margin-top: 1rem;
@@ -19,8 +21,8 @@ footer{
 footer .social{
   max-width: 100%;
   text-align: center;
-  padding-top: 15px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 footer .social a{
   color: #999999;
@@ -37,6 +39,9 @@ footer .social a{
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
+}
+.footer-text{
+  margin-bottom: 0.5rem;
 }
 
 /* copyright */
@@ -60,6 +65,36 @@ footer .social a{
 }
 .fa-instagram{
   font-size: 3.5rem;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 1rem;
+}
+
+@media (max-width: 768px){
+  #footer-brand {
+    width: 12rem;
+  }
+  .access-info {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 576px){
+  .footer-content {
+    flex-direction: column;
+  }
+  .access-info {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  footer .social{
+    align-items: unset;
+    justify-content: center;
+    padding: 1rem;
+  }
+  #footer-brand{
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 435px){

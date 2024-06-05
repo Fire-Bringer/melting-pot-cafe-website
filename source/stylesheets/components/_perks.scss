@@ -23,6 +23,12 @@
   font-size: clamp(1rem, 1.8vw, 1.8rem);
 }
 
+@media (max-width: 576px){
+  .perk-row {
+    padding: 0 1rem;
+  }
+}
+
 @media (max-width: 435px){
   .perk-box {
     justify-content: center;
