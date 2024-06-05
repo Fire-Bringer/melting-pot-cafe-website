@@ -6,6 +6,7 @@
   justify-content: space-around;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
+  padding: 1rem 0;
 }
 .perk-box{
   display: flex;
@@ -20,12 +21,6 @@
 .perk-row .perk-box h3{
   font-family: "CooperBlack";
   font-size: clamp(1rem, 1.8vw, 1.8rem);
-}
-
-@media (max-width: 576px){
-  .perk-row {
-    padding: 1rem 1rem;
-  }
 }
 
 @media (max-width: 435px){
