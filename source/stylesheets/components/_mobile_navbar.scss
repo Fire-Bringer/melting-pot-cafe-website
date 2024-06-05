@@ -20,7 +20,9 @@
 }
 .nav-link{
   transition: 0.7s ease;
-  color: white;
+  color: #fffe00;
+  font-family: "CooperBlack";
+  text-shadow: 2px 2px black;
 }
 .nav-link:hover{
   color: #da30a5fb;
@@ -50,6 +52,7 @@
   }
   .shop-emblem{
     margin-left: unset;
+    width: 3rem;
   }
   header{
     padding: 15px;
@@ -113,7 +116,7 @@
   .nav-menu.active{
     left: 0;
     list-style-type: none;
-    background-color: #91524A;
+    background-color: #541519a9;
   }
   .hero .hero-content{
     margin-top: 5rem;
