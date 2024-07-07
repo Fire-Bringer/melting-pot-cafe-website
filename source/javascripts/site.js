@@ -60,6 +60,9 @@ tl.to(".icon ion-icon, .icon-2 ion-icon", {
   ease: "power3.out",
 }, "-=1");
 
+
+
+
 // Menu Tabs Start
 function openMenu(evt, menuName) {
   // Declare all variables
@@ -81,6 +84,7 @@ function openMenu(evt, menuName) {
   document.getElementById(menuName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
+
 
 // Get the element with id="defaultOpen" and click on it
 window.addEventListener("DOMContentLoaded", function() {
