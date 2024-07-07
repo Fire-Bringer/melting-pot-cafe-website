@@ -60,6 +60,34 @@ tl.to(".icon ion-icon, .icon-2 ion-icon", {
   ease: "power3.out",
 }, "-=1");
 
+// Test Point
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Select main image and preview images
+  const mainImg = document.getElementById('main-img');
+  const previewImgs = document.querySelectorAll('.hero-footer .intro-img');
+
+  // Set up a timeline
+  let tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+
+  // Loop through each preview image and create a sequence for them
+  previewImgs.forEach((img, index) => {
+    tl.to(mainImg, {
+      duration: 3,
+      opacity: 0,
+      onComplete: () => {
+        mainImg.src = img.src;
+      }
+    })
+    .to(mainImg, { duration: 1, opacity: 1 })
+    .to(".slide-num p", {
+      text: `${index + 1} &mdash; ${previewImgs.length}`,
+      duration: 6
+    }, "<");
+  });
+});
+
+
 
 
 

@@ -85,9 +85,6 @@ dd{
   height: 100%;
   object-fit: cover;
 }
-#main-img{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(84, 21, 25, 0.5));
-}
 
 .hero-content {
   position: relative;
@@ -202,6 +199,16 @@ dd{
   height: 100%;
   display: flex;
   gap: 1em;
+}
+.main-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(84, 21, 25, 0.5)); /* Dark brown overlay */
+  z-index: 1; /* Ensure it overlays the images */
 }
 
 .hero-container .col {
