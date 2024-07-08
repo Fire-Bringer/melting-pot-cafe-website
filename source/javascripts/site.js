@@ -47,9 +47,15 @@ tl.to(".hero-container", {
   ease: "power4.inOut"
 }, "-=2");
 
-tl.to(".hero-nav-item a, .title p, .slide-num p, .preview img", {
+tl.to(".hero-nav-item a, .slide-num p, .preview img", {
   top: 0,
   stagger: 0.075,
+  duration: 1,
+  ease: "power3.out",
+}, "-=1.5");
+
+tl.to(".title", {
+  opacity: 1,  /* Fade in */
   duration: 1,
   ease: "power3.out",
 }, "-=1.5");
@@ -59,6 +65,8 @@ tl.to(".icon ion-icon, .icon-2 ion-icon", {
   stagger: 0.05,
   ease: "power3.out",
 }, "-=1");
+
+
 
 // Test Point
 
@@ -98,11 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Set up a timeline for automatic switching
-  let tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+  let tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
   previewImgs.forEach((img, index) => {
     tl.to(mainImg, {
-      duration: 3,
+      duration: 0.5,
       opacity: 0,
       onComplete: () => {
         mainImg.src = img.src;

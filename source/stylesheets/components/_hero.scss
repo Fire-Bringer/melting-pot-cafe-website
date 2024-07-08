@@ -111,8 +111,11 @@ dd{
   position: relative;
   top: 20px;
   text-decoration: none;
-  color: #fff;
-  opacity: 0.35;
+  opacity: 0.6;
+  font-family: "CooperBlack";
+  font-size: 15px;
+  text-shadow: 2px 2px #000000;
+  color: #fffe00cc;
 }
 
 .hero-nav-item a#active {
@@ -135,7 +138,9 @@ dd{
   flex: 0.5;
   padding: 0 5em;
   font-size: 30px;
-  opacity: 0.5;
+  opacity: 0.8;
+  text-shadow: 2px 2px #000000;
+  color: #fffe00cc;
 }
 
 .icon-2 {
@@ -148,15 +153,22 @@ dd{
 }
 
 .title {
-  flex: 2;
+  position: relative;
+  flex: 3;
   text-align: center;
-  font-size: 40px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0; /* Start hidden */
+  transition: opacity 1s ease; /* Add transition for smooth animation */
 }
 
-.title p {
-  position: relative;
-  top: 100px;
+.title h5 {
+  color: #fffe00cc;
+  font-family: "CooperBlack";
+  font-size: 18px;
+  line-height: 1;
+  text-shadow: 2px 2px #000000;
+}
+
+.title h1 {
   color: #fffe00cc;
   font-size: clamp(2rem, 4vw, 4rem);
   font-family: "Umbriago NF W01 Regular";
@@ -165,7 +177,29 @@ dd{
   margin: 0;
   padding: 0;
   text-shadow: 2px 2px #000000;
-  width: 20rem;
+}
+.title h3{
+  color: #FFFE00;
+  font-family: "CooperBlack";
+  font-size: 25px;
+  font-weight: 500px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 1px #000000;
+}
+.title h6{
+  color: #fffe00cc;
+  font-family: "CooperBlack";
+  text-shadow: 2px 2px #000000;
+  margin-bottom: 2rem;
+}
+dl{
+  color: #fffe00cc;
+  text-shadow: 2px 2px #000000;
+  font-size: 1.2rem;
+}
+dd{
+  margin-bottom: 0;
 }
 
 .hero-footer {
@@ -193,7 +227,8 @@ dd{
 .slide-num {
   margin: 3em 0;
   text-align: center;
-  color: #fff;
+  text-shadow: 2px 2px #000000;
+  color: #fffe00cc;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
