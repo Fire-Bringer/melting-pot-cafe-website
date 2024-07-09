@@ -196,7 +196,7 @@ dd{
 dl{
   color: #fffe00cc;
   text-shadow: 2px 2px #000000;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 dd{
   margin-bottom: 0;
@@ -309,5 +309,26 @@ dd{
   .preview img {
     width: 60px;
     height: 40px;
+  }
+}
+
+@media (max-width: 426px) {
+  .preview{
+    display: none;
+  }
+}
+
+@media (max-width: 376px) {
+  .hero-nav {
+    gap: 2em;
+  }
+  .title h6{
+    display: none;
+  }
+}
+
+@media (max-width: 321px) {
+  .hero-nav {
+    gap: 1.5em;
   }
 }
