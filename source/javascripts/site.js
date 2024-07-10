@@ -1,3 +1,6 @@
+gsap.registerPlugin(TextPlugin);
+
+
 let tl = gsap.timeline({delay: 0});
 
 tl.to(".col", {
@@ -66,6 +69,13 @@ tl.to(".icon ion-icon, .icon-2 ion-icon", {
   ease: "power3.out",
 }, "-=1");
 
+// New animations for .head1 and .head2
+tl.to(".head1, .head2", {
+  opacity: 1,  /* Fade in */
+  duration: 1,
+  ease: "power3.out",
+}, "-=1.5");
+
 
 
 // Test Point
@@ -124,7 +134,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Navbar color change on scroll
+document.addEventListener('scroll', function() {
+  const head1 = document.querySelector('.head1');
+  const head2 = document.querySelector('.head2');
 
+  if (window.scrollY > 100) { // Change 100 to the desired scroll position
+    head1.classList.add('fixed');
+    head2.classList.add('fixed');
+  } else {
+    head1.classList.remove('fixed');
+    head2.classList.remove('fixed');
+  }
+});
 
 
 
