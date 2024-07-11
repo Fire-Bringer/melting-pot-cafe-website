@@ -1,92 +1,53 @@
-.menu{
+.card{
   background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(225, 72, 23, 0.5), rgba(0, 0, 0, 0.8)) , image-url('vinyl_shot.jpeg');
   background-attachment: fixed;
   background-position: center;
 }
-.menu-container{
-  min-height: 35vh;
+
+.card img {
+  width: 65vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.menu-logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.menu-section {
   width: 100vw;
+  height: 100vh;
+}
+
+.card.scroll {
+  position: relative;
+}
+
+.menu-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 80vw;
+  height: 90vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: #00000070;
-  padding: 3rem 1rem;
 }
-.menu .section-title h1{
-  font-family: "CooperBlack";
-  color: #fffe00cc;
-  text-shadow: 2px 2px #000000;
-}
-.menu .section-title h1:before{
-  left: 0%;
-}
-.tab{
+
+.menu-footer {
+  width: 100%;
+  height: 10vh;
   display: flex;
-  max-width: 85%;
-  margin-bottom: 20px;
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  overflow: auto;
-  white-space: nowrap;
-}
-.tablinks{
-  color: #fffe00cc;
-  font-weight: 500;
-  font-size: 16px;
-  display: inline-block;
-  margin: 0px 8px;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding-bottom: 0px;
-  text-shadow: 2px 2px #000000;
-}
-.tablinks.active{
-  color: #fffe00cc;
-  border-bottom: 2px solid #fffe00cc;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  transform: scale(1.2); /* Zoom in on hover */
-
-  &:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  height: 70%;
-  justify-content: space-around;
-  flex-direction: column;
-  color: #fffe00cc;
-  text-shadow: 1px 1px #000000;
-  text-align: center;
-  padding: 6px 12px;
-  animation: fadeEffect 1.5s; /* Fading effect takes 1 second */
-}
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@media (max-width: 768px){
-  .menu-container {
-    padding-top: 2rem;
-  }
+.menu-footer h1 {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: -2px;
 }
