@@ -1,6 +1,7 @@
 body{
-  background-color: #541519;
-  // background-color: #D3BA96;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(225, 72, 23, 0.5), rgba(0, 0, 0, 0.8)) , image-url('vinyl_shot.jpeg');
+  background-attachment: fixed;
+  background-position: center;
 }
 h3{
   margin-top: unset;
