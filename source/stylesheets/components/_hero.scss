@@ -239,8 +239,9 @@ dd{
 }
 
 @media (max-width: 426px) {
-  .preview{
-    display: none;
+  .preview img {
+    width: 51px;
+    height: 34px;
   }
 }
 
@@ -251,10 +252,17 @@ dd{
   .title h6{
     display: none;
   }
+  .preview img {
+    width: 45px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 321px) {
   .hero-nav {
     gap: 1.5em;
+  }
+  .preview {
+    display: none;
   }
 }
