@@ -50,7 +50,7 @@ tl.to(".hero-container", {
   ease: "power4.inOut"
 }, "-=2");
 
-tl.to(".hero-nav-item a, .slide-num p, .preview img", {
+tl.to(".slide-num p, .preview img", {
   top: 0,
   stagger: 0.075,
   duration: 1,
