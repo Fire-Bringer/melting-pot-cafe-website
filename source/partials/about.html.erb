@@ -2,7 +2,10 @@
 
     <div class="about-container align-items-center">
       <div class="img">
-        <%= image_tag 'shop_3.jpg' %>
+      <video controls muted autoplay loop>
+          <source src="<%= asset_url('/images/videos/promo_vid.mp4') %>" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
       </div>
       <div class="about-content">
         <h2>We're Dope</h2>

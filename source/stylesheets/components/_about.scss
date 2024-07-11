@@ -8,6 +8,9 @@
 }
 .about .about-content{
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 .about .img{
   width: 50%;
@@ -24,12 +27,18 @@
   border: 2px solid black;
   box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
+.img video {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
 .about .about-content h2{
   font-family: "CooperBlack";
   text-transform: uppercase;
   color: #541519;
   margin: 0 0 5px;
   position: relative;
+  width: 80%;
 }
 .about .about-content p{
   color: #541519;
@@ -37,6 +46,7 @@
   font-weight: 400;
   line-height: 24px;
   margin: 15px 0 0px;
+  width: 80%;
 }
 
 @media (max-width: 576px){
@@ -47,9 +57,9 @@
   }
   .about .about-content{
     padding-right: unset;
-    width: 70%;
+    width: 100%;
   }
-  .about .img img{
+  .about .img {
     width: 100%;
   }
 }
@@ -61,8 +71,5 @@
   }
   .about .img img {
     width: 150%;
-  }
-  .about .about-content {
-    width: 75%;
   }
 }
