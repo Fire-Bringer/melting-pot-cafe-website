@@ -14,9 +14,7 @@
 }
 .nav-menu{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 60px;
 }
 .nav-link{
   transition: 0.7s ease;
@@ -26,6 +24,32 @@
 }
 .nav-link:hover{
   color: #da30a5fb;
+}
+.shop-nav{
+  line-height: 3em;
+}
+.media-nav{
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
+.media-nav a{
+  color: #fffe00;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 12px;
+  transition: all .5s ease;
+  &:hover {
+    transform: scale(1.2); /* Zoom in on hover */
+    color: #fffe00cc;
+  }
+
+  &:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 }
 .hamburger{
   display: none;
@@ -117,9 +141,8 @@
     left: 0;
     list-style-type: none;
     background-color: #541519a9;
+    background-color: #541519e6;
+    height: 100%;
+    padding-left: 0;
   }
-  /*.hero .hero-content{
-    margin-top: 5rem;
-  }
-    */
 }
