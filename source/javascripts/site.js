@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Set up a timeline for automatic switching
-  let tl = gsap.timeline({ repeat: -1, repeatDelay: 15 });
+  let tl = gsap.timeline({ repeat: -1, repeatDelay: 5 });
 
   previewImgs.forEach((img, index) => {
     tl.to(mainImg, {
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .to(mainImg, { duration: 1, opacity: 1 })
     .to(".slide-num p", {
       text: `${index + 1} &mdash; ${previewImgs.length}`,
-      duration: 7
+      duration: 10
     }, "<");
   });
 });
