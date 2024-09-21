@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Set up a timeline for automatic switching
-  let tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+  let tl = gsap.timeline({ repeat: -1, repeatDelay: 3 });
 
   previewImgs.forEach((img, index) => {
     tl.to(mainImg, {
