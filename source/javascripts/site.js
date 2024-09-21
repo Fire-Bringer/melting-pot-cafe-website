@@ -1,5 +1,6 @@
 gsap.registerPlugin(TextPlugin);
 
+
 document.addEventListener('DOMContentLoaded', () => {
   // Select all images inside .hero-container
   const images = document.querySelectorAll('.hero-container img');
@@ -20,132 +21,141 @@ document.addEventListener('DOMContentLoaded', () => {
   Promise.all(imagePromises).then(() => {
     console.log("All images loaded");
 
-    // Start GSAP timeline animation wrapped in a Promise
-    const initialAnimation = new Promise((resolve) => {
-      let tl = gsap.timeline({ delay: 0 });
+    // Start GSAP timeline animation
+    let tl = gsap.timeline({ delay: 0 });
 
-      tl.to(".col", {
-        top: "0",
-        duration: 3,
-        ease: "power4.inOut"
-      });
-
-      tl.to(".c-1 .item", {
-        top: "0",
-        stagger: 0.25,
-        duration: 3,
-        ease: "power4.inOut"
-      }, "-=2");
-
-      tl.to(".c-2 .item", {
-        top: "0",
-        stagger: -0.25,
-        duration: 3,
-        ease: "power4.inOut"
-      }, "-=4");
-
-      tl.to(".c-3 .item", {
-        top: "0",
-        stagger: 0.25,
-        duration: 3,
-        ease: "power4.inOut"
-      }, "-=4");
-
-      tl.to(".c-4 .item", {
-        top: "0",
-        stagger: -0.25,
-        duration: 3,
-        ease: "power4.inOut"
-      }, "-=4");
-
-      tl.to(".c-5 .item", {
-        top: "0",
-        stagger: 0.25,
-        duration: 3,
-        ease: "power4.inOut"
-      }, "-=4");
-
-      tl.to(".hero-container", {
-        scale: 6,
-        duration: 4,
-        ease: "power4.inOut"
-      }, "-=2");
-
-      tl.to(".slide-num p, .preview img", {
-        top: 0,
-        stagger: 0.075,
-        duration: 1,
-        ease: "power3.out",
-      }, "-=1.5");
-
-      tl.to(".title", {
-        opacity: 1,  /* Fade in */
-        duration: 1,
-        ease: "power3.out",
-      }, "-=1.5");
-
-      tl.to(".icon ion-icon, .icon-2 ion-icon", {
-        scale: 1,
-        stagger: 0.05,
-        ease: "power3.out",
-      }, "-=1");
-
-      // New animations for .head1 and .head2
-      tl.to(".head1, .head2", {
-        opacity: 1,  /* Fade in */
-        duration: 1,
-        ease: "power3.out",
-      }, "-=1.5");
-
-      // Resolve the promise once the timeline completes
-      tl.eventCallback("onComplete", resolve);
+    tl.to(".col", {
+      top: "0",
+      duration: 3,
+      ease: "power4.inOut"
     });
 
-    // After initial animation, start automatic slider
-    initialAnimation.then(() => {
-      console.log("Initial animation complete, starting automatic slider");
+    tl.to(".c-1 .item", {
+      top: "0",
+      stagger: 0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=2");
 
-      // Select main image and preview images
-      const mainImg = document.getElementById('main-img');
-      const previewImgs = document.querySelectorAll('.hero-footer .intro-img');
-      const slideNum = document.querySelector('.slide-num p');
+    tl.to(".c-2 .item", {
+      top: "0",
+      stagger: -0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
 
-      let currentIndex = 0;
+    tl.to(".c-3 .item", {
+      top: "0",
+      stagger: 0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
 
-      // Function to update the main image and slide number
-      function updateImage(index) {
-        gsap.to(mainImg, {
-          duration: 1,
-          opacity: 0,
-          onComplete: () => {
-            mainImg.src = previewImgs[index].src;
-            gsap.to(mainImg, { duration: 1, opacity: 1 });
-          }
-        });
-        slideNum.innerHTML = `${index + 1} &mdash; ${previewImgs.length}`;
-      }
+    tl.to(".c-4 .item", {
+      top: "0",
+      stagger: -0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
 
-      // Set up a timeline for automatic switching
-      let sliderTl = gsap.timeline({ repeat: -1, repeatDelay: 3 });
+    tl.to(".c-5 .item", {
+      top: "0",
+      stagger: 0.25,
+      duration: 3,
+      ease: "power4.inOut"
+    }, "-=4");
 
-      previewImgs.forEach((img, index) => {
-        sliderTl.to(mainImg, {
-          duration: 0.5,
-          opacity: 0,
-          onComplete: () => {
-            mainImg.src = img.src;
-          }
-        })
-        .to(mainImg, { duration: 1, opacity: 1 })
-        .to(".slide-num p", {
-          text: `${index + 1} &mdash; ${previewImgs.length}`,
-          duration: 7
-        }, "<");
-      });
-    });
+    tl.to(".hero-container", {
+      scale: 6,
+      duration: 4,
+      ease: "power4.inOut"
+    }, "-=2");
+
+    tl.to(".slide-num p, .preview img", {
+      top: 0,
+      stagger: 0.075,
+      duration: 1,
+      ease: "power3.out",
+    }, "-=1.5");
+
+    tl.to(".title", {
+      opacity: 1,  /* Fade in */
+      duration: 1,
+      ease: "power3.out",
+    }, "-=1.5");
+
+    tl.to(".icon ion-icon, .icon-2 ion-icon", {
+      scale: 1,
+      stagger: 0.05,
+      ease: "power3.out",
+    }, "-=1");
+
+    // New animations for .head1 and .head2
+    tl.to(".head1, .head2", {
+      opacity: 1,  /* Fade in */
+      duration: 1,
+      ease: "power3.out",
+    }, "-=1.5");
   });
 });
 
+
+
+// Hero Slider
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Select main image and preview images
+  const mainImg = document.getElementById('main-img');
+  const previewImgs = document.querySelectorAll('.hero-footer .intro-img');
+  const prevIcon = document.getElementById('icon-prev');
+  const nextIcon = document.getElementById('icon-next');
+  const slideNum = document.querySelector('.slide-num p');
+
+  // Variables to track current index
+  let currentIndex = 0;
+
+  // Function to update the main image and slide number
+  function updateImage(index) {
+    gsap.to(mainImg, {
+      duration: 1,
+      opacity: 0,
+      onComplete: () => {
+        mainImg.src = previewImgs[index].src;
+        gsap.to(mainImg, { duration: 1, opacity: 1 });
+      }
+    });
+    slideNum.innerHTML = `${index + 1} &mdash; ${previewImgs.length}`;
+  }
+
+  // Event listeners for the icons
+  prevIcon.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : previewImgs.length - 1;
+    updateImage(currentIndex);
+  });
+
+  nextIcon.addEventListener('click', () => {
+    currentIndex = (currentIndex < previewImgs.length - 1) ? currentIndex + 1 : 0;
+    updateImage(currentIndex);
+  });
+
+  // Set up a timeline for automatic switching
+  let tl = gsap.timeline({ repeat: -1, repeatDelay: 7 });
+
+  previewImgs.forEach((img, index) => {
+    tl.to(mainImg, {
+      duration: 0.5,
+      opacity: 0,
+      onComplete: () => {
+        mainImg.src = img.src;
+      }
+    })
+    .to(mainImg, { duration: 1, opacity: 1 })
+    .to(".slide-num p", {
+      text: `${index + 1} &mdash; ${previewImgs.length}`,
+      duration: 7
+    }, "<");
+  });
+});
 
 // Navbar color change on scroll
 document.addEventListener('scroll', function() {
