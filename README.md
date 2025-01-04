@@ -10,8 +10,11 @@ A landing page made for a medium-sized vinyl music cafe within Kanazawa in mind.
 
 ### Screenshots:
 
+Intro Animation
+![Vinyl-Intro](https://github.com/user-attachments/assets/8a83a488-7a1e-4e1d-a085-0c708b753b17)
+
 Landing Page Hero
-![Vinyl-Hero](https://github.com/user-attachments/assets/ce7dbf70-6bc2-444c-b2b1-d58068e0f419)
+![Vinyl-Hero](https://github.com/user-attachments/assets/4fd481fe-5338-4484-83ca-7cd35e22c191)
 
 About Section
 ![Vinyl-About](https://github.com/user-attachments/assets/c5ed7057-0246-47b8-977e-813f07957870)
