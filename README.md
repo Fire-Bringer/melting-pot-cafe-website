@@ -1,4 +1,4 @@
-# 🎶 Melting Pot Cafe
+# 🎶 Vinyl Cafe
 A landing page made for a medium-sized vinyl music cafe within Kanazawa in mind. The cafe features a prominence of classic American hip-hop which is reflected within the introductory animation. 
 
 ### Features
